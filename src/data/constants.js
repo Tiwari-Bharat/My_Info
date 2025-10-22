@@ -661,4 +661,4 @@ export const projects = [
 //     github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
 //     webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
 //   },
-// ];
+];
