@@ -243,7 +243,7 @@ export const skills = [
       //   name: "Sk Learn Kit",
       //   image:
       //     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
-      },
+      // },
     ],
   },
   {
