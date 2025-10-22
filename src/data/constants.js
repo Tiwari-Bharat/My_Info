@@ -67,7 +67,7 @@ export const skills = [
       {
         name: "Tailwind",
         image:
-          "https://share.google/mZMeHh1l7qvymdDRS",
+          "https://cdn.brandfetch.io/idKJ12s-EY/w/400/h/400/theme/dark/icon.jpeg",
       },
       {
         name: "Bootstrap",
