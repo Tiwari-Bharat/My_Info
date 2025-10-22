@@ -396,7 +396,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://share.google/6oWUWhJpJEfsLilVV",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdB53HEt3YcDAbTjsgFsd3C9TEZ5J8zGNdOgdfeva4u6Z_VOArFA-C00&s=10",
     school: "Jawahar Navodaya Vidyalaya, Valsad",
     date: "June 2025 - Present (Continue)",
     grade: "None",
@@ -405,7 +405,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://share.google/6oWUWhJpJEfsLilVV",
+    img: "https://pbs.twimg.com/profile_images/1952687148777574400/shl7iyyn_400x400.jpg",
     school: "Jawahar Navodaya Vidyalaya, Valsad",
     date: "Apr 2024 - Apr 2025",
     grade: "Not Available",
@@ -414,7 +414,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://share.google/6oWUWhJpJEfsLilVV",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl7wA7sioh72WfeV-4qoanVzrU8EqHkQsCFlpLXn8Wbg&s=10",
     school: "Jawahar Navodaya Vidyalaya, Valsad",
     date: "Apr 2021 - Apr 2024",
     grade: "Not Available",
@@ -423,7 +423,7 @@ export const education = [
   },
   {
     id: 3,
-    img: "https://share.google/PpxlxPT6CSmIlX9bv",
+    img: "op",
     school: "St. Joseph English Higher Secondary School, Karvad",
     date: "Apr 2018 - Mar 2021",
     grade: "Not Available",
@@ -432,7 +432,7 @@ export const education = [
   },
   {
     id: 4,
-    img: "https://share.google/f0SiJ0Ux4DSbpzAqF",
+    img: "https://bingo.icbse.com/v1/business.jpg?action=logo&id=egkddq",
     school: "Jai Bajarang English medium School",
     date: "2017 - 2018",
     grade: "Not Available",
@@ -441,7 +441,7 @@ export const education = [
   },
   {
     id: 5,
-    img: "https://share.google/E6THztlqaxgN6b9yZ",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfARpounILyRPuYq4fVKz1K9FM0H7bNQHDOVtmRsABrmPsHBFSEwuzdHk&s=10",
     school: "Arthab Public School",
     date: "2016 - 2017",
     grade: "Not Available",
