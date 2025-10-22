@@ -70,7 +70,6 @@ export const skills = [
           "https://share.google/mZMeHh1l7qvymdDRS",
       },
       {
-      {
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
