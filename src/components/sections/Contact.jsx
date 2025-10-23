@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
 
-// ========== Styled Components ==========
+// Styled Components
 const Container = styled(motion.div)`
   display: flex;
   justify-content: center;
@@ -122,7 +122,7 @@ const Button = styled(motion.input)`
   }
 `;
 
-// ========== Motion Variants ==========
+// Motion Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -137,7 +137,16 @@ const fadeIn = {
   visible: { opacity: 1, transition: { duration: 1 } },
 };
 
-// ========== Component ==========
+const floatAnimation = {
+  y: [0, -20, 0],
+  transition: {
+    duration: 4,
+    ease: "easeInOut",
+    repeat: Infinity,
+  },
+};
+
+// Component
 const Contact = () => {
   const form = useRef();
 
@@ -164,17 +173,11 @@ const Contact = () => {
   };
 
   return (
-    <Container
-      variants={fadeIn}
-      initial="hidden"
-      animate="visible"
-    >
+    <Container variants={fadeIn} initial="hidden" animate="visible">
       <Wrapper>
         <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.2 }}
+          animate={floatAnimation}
+          style={{ width: "100%", maxWidth: "500px", height: "400px" }}
         >
           <EarthCanvas />
         </motion.div>
