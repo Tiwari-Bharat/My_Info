@@ -174,8 +174,8 @@ const Contact = () => {
         </Desc>
         <ContactForm onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
+          <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" name="message" rows={4} />
           <ContactButton type="submit" value="Send" />
