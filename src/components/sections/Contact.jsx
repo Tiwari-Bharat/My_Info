@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
 
-const Container = styled.div`
+// ========== Styled Components ==========
+const Container = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +16,7 @@ const Container = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
   font-size: 52px;
   text-align: center;
   font-weight: 700;
@@ -41,7 +43,7 @@ const Title = styled.h2`
   }
 `;
 
-const Desc = styled.p`
+const Desc = styled(motion.p)`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
@@ -51,7 +53,7 @@ const Desc = styled.p`
   }
 `;
 
-const ContactForm = styled.form`
+const ContactForm = styled(motion.form)`
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -99,7 +101,7 @@ const Textarea = styled.textarea`
   }
 `;
 
-const Button = styled.input`
+const Button = styled(motion.input)`
   background: linear-gradient(
     225deg,
     hsla(271, 100%, 50%, 1) 0%,
@@ -116,9 +118,26 @@ const Button = styled.input`
   transition: 0.3s ease;
   &:hover {
     opacity: 0.9;
+    scale: 1.03;
   }
 `;
 
+// ========== Motion Variants ==========
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1 } },
+};
+
+// ========== Component ==========
 const Contact = () => {
   const form = useRef();
 
@@ -127,10 +146,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_22vj81g", // your service ID
-        "template_fgqh9ub", // your template ID
-        form.current, // form reference
-        "DyrJjNDrZBL-tsG_8" // your public key
+        "service_22vj81g",
+        "template_fgqh9ub",
+        form.current,
+        "DyrJjNDrZBL-tsG_8"
       )
       .then(
         () => {
@@ -145,20 +164,43 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container
+      variants={fadeIn}
+      initial="hidden"
+      animate="visible"
+    >
       <Wrapper>
-        <EarthCanvas />
-        <Title>Contact</Title>
-        <Desc>
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.2 }}
+        >
+          <EarthCanvas />
+        </motion.div>
+
+        <Title variants={fadeInUp} initial="hidden" animate="visible">
+          Contact
+        </Title>
+
+        <Desc variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.1 }}>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
+
+        <ContactForm
+          ref={form}
+          onSubmit={handleSubmit}
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.3 }}
+        >
           <ContactTitle>Email Me 🚀</ContactTitle>
           <Input placeholder="Your Name" name="from_name" required />
           <Input placeholder="Your Email" name="from_email" type="email" required />
           <Input placeholder="Subject" name="subject" />
           <Textarea placeholder="Message" name="message" rows={4} required />
-          <Button type="submit" value="Send" />
+          <Button type="submit" value="Send" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} />
         </ContactForm>
       </Wrapper>
     </Container>
