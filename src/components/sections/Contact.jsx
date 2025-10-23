@@ -126,41 +126,22 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-
     emailjs
       .send(
-        service_22vj81g,
-        template_fgqh9ub,
+        "service_22vj81g",
+        "template_fgqh9ub",
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Bharat Tiwari",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "tiwaribharat5321@gmail.com",
           message: form.message,
         },
-        DyrJjNDrZBL-tsG_8
+        "DyrJjNDrZBL-tsG_8"
       )
       .then(
         () => {
@@ -182,6 +163,7 @@ const Contact = () => {
       );
   };
 
+
   return (
     <Container>
       <Wrapper>
@@ -192,8 +174,8 @@ const Contact = () => {
         </Desc>
         <ContactForm onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Your Email" name="from_email" />
+          <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" name="message" rows={4} />
           <ContactButton type="submit" value="Send" />
