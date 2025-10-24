@@ -30,6 +30,11 @@ This is a React-based 3D portfolio website featuring Three.js animations, intera
   - Fixed npm binary linking issue by running `npm rebuild`
   - Configured workflow to run development server on port 5000
   - Verified successful compilation and deployment
+- Added new Info section below Hero section:
+  - Created Info.jsx component with responsive card layout
+  - Displays 4 key statistics (Projects Completed, Years Experience, Technologies Mastered, Client Satisfaction)
+  - Styled with gradient backgrounds and hover effects matching site theme
+  - Added info data array to constants.js
 
 ## Project Architecture
 - **Components**: Organized into sections (Hero, Skills, Projects, Education, Experience, Contact, Footer)

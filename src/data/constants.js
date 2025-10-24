@@ -23,7 +23,26 @@ export const Bio = {
 };
 
 export const info = [
-  
+  {
+    number: "50+",
+    title: "Projects Completed",
+    description: "Successfully delivered diverse projects ranging from web apps to mobile applications"
+  },
+  {
+    number: "3+",
+    title: "Years Experience",
+    description: "Continuous learning and hands-on development experience across multiple technologies"
+  },
+  {
+    number: "15+",
+    title: "Technologies Mastered",
+    description: "Proficient in modern web, mobile, and software development technologies"
+  },
+  {
+    number: "100%",
+    title: "Client Satisfaction",
+    description: "Committed to delivering high-quality solutions that exceed expectations"
+  }
   ]
 
 export const skills = [

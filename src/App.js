@@ -3,6 +3,7 @@ import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
+import Info from "./components/sections/Info";
 import Skills from "./components/sections/Skills";
 import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
@@ -48,6 +49,7 @@ function App() {
           <AnimatePresence>
             <div>
               <Hero />
+              <Info />
               <Wrapper>
                 <Skills />
                 <Education />
