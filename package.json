@@ -1,7 +1,7 @@
 {
   "name": "3d-portfolio-website",
-  "version": "0.1.1",
-  "homepage": "https://rishavchanda.github.io",
+  "version": "1.1.1",
+  "homepage": "https://Tiwari-Bharat.github.io/My_Info",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
