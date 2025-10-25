@@ -2,10 +2,9 @@ export const Bio = {
   name: "Bharatdev Tiwari",
   roles: [
     "Student",
-    "_",
+    "",
     "Student of Nowadaya",
     "Android Developer",
-    "UI/UX Designer",
     "Programmer",
     "Full Stack Developer",
     "Web Developer",
@@ -18,32 +17,134 @@ export const Bio = {
   resume: "#",
   linkedin: "#",
   twitter: "#",
-  insta: "#",
+  insta: "https://www.instagram.com/bharat_tiwari_o5",
   facebook: "#",
 };
 
-export const info = [
+import { User, Phone, MapPin, Heart, BookOpen, Award, Droplets, Mail, BadgeAlert } from "lucide-react";
+export const personalInfo = [
   {
-    number: "50+",
-    title: "Projects Completed",
-    description: "Successfully delivered diverse projects ranging from web apps to mobile applications"
+    id: 1,
+    section: "Student Information",
+    icon: User,
+    details: [
+      { title: "Name", value: "Bharat Tiwari", icon: User },
+      { title: "Institution Name", value: "PM Shri Jawahar Navodaya Vidyalaya", icon: Award },
+      { title: "Class / Section / Roll No.", value: "XI / Science / 1105", icon: BookOpen },
+    ],
   },
   {
-    number: "3+",
-    title: "Years Experience",
-    description: "Continuous learning and hands-on development experience across multiple technologies"
+    id: 2,
+    section: "Father’s Details",
+    icon: User,
+    details: [
+      { title: "Father’s Name", value: "Shree Devendra Prasad Tiwari" },
+      { title: "Aadhaar Number", value: "XXXX-XXXX-XXXX" },
+      { title: "Phone Number", value: "+91 9327163480", icon: Phone },
+    ],
   },
   {
-    number: "15+",
-    title: "Technologies Mastered",
-    description: "Proficient in modern web, mobile, and software development technologies"
+    id: 3,
+    section: "Mother’s Details",
+    icon: Heart,
+    details: [
+      { title: "Mother’s Name", value: "Smt. Anita Devendraprasad Tiwari" },
+      { title: "Aadhaar Number", value: "XXXX-XXXX-XXXX" },
+      { title: "Phone Number", value: "+91 7069524188", icon: Phone },
+    ],
   },
   {
-    number: "100%",
-    title: "Client Satisfaction",
-    description: "Committed to delivering high-quality solutions that exceed expectations"
-  }
-  ]
+    id: 4,
+    section: "Personal Information",
+    icon: Droplets,
+    details: [
+      { title: "Date of Birth", value: "19 October 2009" },
+      { title: "Blood Group", value: "O+" },
+      { title: "Contact Number", value: "+91 7069524188", icon: Phone },
+      { title: "Address", value: "Chanod, Vapi, Valsad, Gujarat.", icon: MapPin },
+      { title: "Aadhaar Card", value: "455513194333" },
+    ],
+  },
+  {
+    id: 5,
+    section: "Interests & Ambitions",
+    icon: Award,
+    details: [
+      { title: "Favourite Subject", value: "Computer Science" },
+      { title: "Special Skill", value: "Creative Coding & Web Designing" },
+      { title: "Hobbies", value: "Writing, Designing, Exploring AI Tools" },
+      { title: "Ambition", value: "To become a Full Stack Developer r" },
+    ],
+  },
+  {
+    id: 6,
+    section: "Important & Exams",
+    icon: BadgeAlert,
+    details: [
+      { title: "Board Roll No.", value: "11142639" },
+      { title: "APAAR ID", value: "—" },
+      { title: "Khan Academy ID", value: "bharattiwari2" },
+      { title: "Password", value: "Jnvvalsad" },
+    ],
+  },
+];
+
+export const education = [
+  {
+    id: 0,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdB53HEt3YcDAbTjsgFsd3C9TEZ5J8zGNdOgdfeva4u6Z_VOArFA-C00&s=10",
+    school: "Jawahar Navodaya Vidyalaya, Valsad",
+    date: "June 2025 - Present (Continue)",
+    grade: "None",
+    desc: "I am currently studying in this Vidyalaya",
+    degree: "XI and XII",
+  },
+  {
+    id: 1,
+    img: "https://pbs.twimg.com/profile_images/1952687148777574400/shl7iyyn_400x400.jpg",
+    school: "Jawahar Navodaya Vidyalaya, Valsad",
+    date: "Apr 2024 - Apr 2025",
+    grade: "Not Available",
+    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    degree: "X Pass",
+  },
+  {
+    id: 2,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl7wA7sioh72WfeV-4qoanVzrU8EqHkQsCFlpLXn8Wbg&s=10",
+    school: "Jawahar Navodaya Vidyalaya, Valsad",
+    date: "Apr 2021 - Apr 2024",
+    grade: "Not Available",
+    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    degree: "VI, VII, VIII & IX Pass",
+  },
+  {
+    id: 3,
+    img: "op",
+    school: "St. Joseph English Higher Secondary School, Karvad",
+    date: "Apr 2018 - Mar 2021",
+    grade: "Not Available",
+    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    degree: "II, III, IV & V Class Pass",
+  },
+  {
+    id: 4,
+    img: "https://bingo.icbse.com/v1/business.jpg?action=logo&id=egkddq",
+    school: "Jai Bajarang English medium School",
+    date: "2017 - 2018",
+    grade: "Not Available",
+    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    degree: "I Class Pass",
+  },
+  {
+    id: 5,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfARpounILyRPuYq4fVKz1K9FM0H7bNQHDOVtmRsABrmPsHBFSEwuzdHk&s=10",
+    school: "Arthab Public School",
+    date: "2016 - 2017",
+    grade: "Not Available",
+    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    degree: "Jr. Kg and  Sr. Kg (Pass) ",
+  },
+];
 
 export const skills = [
   {
@@ -59,11 +160,11 @@ export const skills = [
       //   image:
       //     "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
       // },
-      {
-        name: "Next Js",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
-      },
+      // {
+      //   name: "Next Js",
+      //   image:
+      //     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
+      // },
       // {
       //   name: "Angular Js",
       //   image:
@@ -88,11 +189,11 @@ export const skills = [
         image:
           "https://cdn.brandfetch.io/idKJ12s-EY/w/400/h/400/theme/dark/icon.jpeg",
       },
-      {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
+      // {
+      //   name: "Bootstrap",
+      //   image:
+      //     "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+      // },
       {
         name: "Material UI",
         image:
@@ -317,7 +418,6 @@ export const experiences = [
     desc: ".",
     skills: [
       "ReactJS",
-      "Redux",
       "NodeJs",
       "Material UI",
       "HTML",
@@ -326,47 +426,47 @@ export const experiences = [
     ],
     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202024-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
   },
-  {
-    id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
-    role: "DevOps & Fullstack Engineering",
-    company: "Self",
-    date: "June",
-    desc: "Built Flipr Connect Platforms using React Js integrated GraphQL with AXIOS, created High level Design and Figma design. Built Backend with GraphQL and Node JS and connected with MongoDb - Reducing API calls by 20%. Dockerized and automated with Kubernetes & Jenkins CI/CD deployed in AWS-EC2 added Prometheus & Grafana for monitoring.",
-    skills: [
-      "Docker",
-      "Terraform",
-      "AWS",
-      "EC2",
-      "Portainer",
-      "Nginx",
-      "JavaScript",
-      "TypeScript",
-      "Node Js",
-      " Next Js",
-    ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
-  },
-  {
-    id: 2,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Rudraksha.jpeg?alt=media&token=8f83f41e-d0a1-486f-9c7f-dd4cd1d09e8d",
-    role: "Android Developer",
-    company: "Self",
-    date: "June",
-    desc: "• Built RudraShakti - Astrologer App, with MVVM Architecture using Java and Android Studio integrating Firebase SDK. Created One to One video call integration with Socket.IO and Firebase cloud functions and integrated with Retrofit. Created Low Level Design and converted Figma design to XML code.",
-    skills: [
-      "Android",
-      "Java",
-      "Kotlin",
-      "XML",
-      "Node Js",
-      "Cloud Firestore",
-      "Firebase",
-      "Figma",
-    ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
-  },
-  {
+//   {
+//     id: 1,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+//     role: "DevOps & Fullstack Engineering",
+//     company: "Self",
+//     date: "June",
+//     desc: "Built Flipr Connect Platforms using React Js integrated GraphQL with AXIOS, created High level Design and Figma design. Built Backend with GraphQL and Node JS and connected with MongoDb - Reducing API calls by 20%. Dockerized and automated with Kubernetes & Jenkins CI/CD deployed in AWS-EC2 added Prometheus & Grafana for monitoring.",
+//     skills: [
+//       "Docker",
+//       "Terraform",
+//       "AWS",
+//       "EC2",
+//       "Portainer",
+//       "Nginx",
+//       "JavaScript",
+//       "TypeScript",
+//       "Node Js",
+//       " Next Js",
+//     ],
+//     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
+//   },
+//   {
+//     id: 2,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Rudraksha.jpeg?alt=media&token=8f83f41e-d0a1-486f-9c7f-dd4cd1d09e8d",
+//     role: "Android Developer",
+//     company: "Self",
+//     date: "June",
+//     desc: "• Built RudraShakti - Astrologer App, with MVVM Architecture using Java and Android Studio integrating Firebase SDK. Created One to One video call integration with Socket.IO and Firebase cloud functions and integrated with Retrofit. Created Low Level Design and converted Figma design to XML code.",
+//     skills: [
+//       "Android",
+//       "Java",
+//       "Kotlin",
+//       "XML",
+//       "Node Js",
+//       "Cloud Firestore",
+//       "Firebase",
+//       "Figma",
+//     ],
+//     doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
+//   },
+//   {
     id: 3,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
     role: "Fullstack Externship",
@@ -375,14 +475,14 @@ export const experiences = [
     desc: "Built an employee management full stack web app used Docker and deployed on AWS ec2. I was the top performer in the program.",
     skills: [
       "ReactJS",
-      "Redux",
+      // "Redux",
       "NodeJs",
       "Material UI",
       "HTML",
       "CSS",
       "JavaScript",
-      "Docker",
-      "AWS",
+      // "Docker",
+      // "AWS",
       "MongoDB",
     ],
     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1691181448873.jpeg?alt=media&token=ee85eb8f-7247-43cd-9a1d-ce9f58ea62a6",
@@ -402,94 +502,35 @@ export const experiences = [
       "Figma",
     ],
   },
-  {
-    id: 5,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
-    role: "Open Source Contributor ",
-    company: "GirlScript Summer of Code",
-    date: "Present",
-    desc: "Contributed to different open-source projects and learn from industry experts",
-  },
-];
-
-export const education = [
-  {
-    id: 0,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdB53HEt3YcDAbTjsgFsd3C9TEZ5J8zGNdOgdfeva4u6Z_VOArFA-C00&s=10",
-    school: "Jawahar Navodaya Vidyalaya, Valsad",
-    date: "June 2025 - Present (Continue)",
-    grade: "None",
-    desc: "I am currently studying in this Vidyalaya",
-    degree: "XI and XII",
-  },
-  {
-    id: 1,
-    img: "https://pbs.twimg.com/profile_images/1952687148777574400/shl7iyyn_400x400.jpg",
-    school: "Jawahar Navodaya Vidyalaya, Valsad",
-    date: "Apr 2024 - Apr 2025",
-    grade: "Not Available",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
-    degree: "X Pass",
-  },
-  {
-    id: 2,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl7wA7sioh72WfeV-4qoanVzrU8EqHkQsCFlpLXn8Wbg&s=10",
-    school: "Jawahar Navodaya Vidyalaya, Valsad",
-    date: "Apr 2021 - Apr 2024",
-    grade: "Not Available",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
-    degree: "VI, VII, VIII & IX Pass",
-  },
-  {
-    id: 3,
-    img: "op",
-    school: "St. Joseph English Higher Secondary School, Karvad",
-    date: "Apr 2018 - Mar 2021",
-    grade: "Not Available",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
-    degree: "II, III, IV & V Class Pass",
-  },
-  {
-    id: 4,
-    img: "https://bingo.icbse.com/v1/business.jpg?action=logo&id=egkddq",
-    school: "Jai Bajarang English medium School",
-    date: "2017 - 2018",
-    grade: "Not Available",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
-    degree: "I Class Pass",
-  },
-  {
-    id: 5,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfARpounILyRPuYq4fVKz1K9FM0H7bNQHDOVtmRsABrmPsHBFSEwuzdHk&s=10",
-    school: "Arthab Public School",
-    date: "2016 - 2017",
-    grade: "Not Available",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
-    degree: "Jr. Kg and  Sr. Kg (Pass) ",
-  },
-];
+//   {
+//     id: 5,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
+//     role: "Open Source Contributor ",
+//     company: "GirlScript Summer of Code",
+//     date: "Present",
+//     desc: "Contributed to different open-source projects and learn from industry experts",
+//   },
+ ];
 
 export const projects = [
-//   {
-//     id: 11,
-//     title: "DecisionHub",
-//     date: "Jan 2024 - Dec 2023",
-//     description:
-//       "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
-//     image:
-//       "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
-//     tags: [
-//       "React Js",
-//       "PostgressSQL",
-//       "Node Js",
-//       "Express Js",
-//       "Redux",
-//       "React Flow",
-//     ],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/DecisionHub",
-//     webapp: "https://decisionhub.netlify.app/",
-//   },
+  {
+    id: 1,
+    title: "First Page",
+    date: "May 2025 - Jun 2025",
+    description:
+      "it is built only for practice and use for many things",
+    image:
+      "https://github.com",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Netlify",
+    ],
+    category: "web app",
+    github: "#",
+    webapp: "https://bharatdev.netlify.app/",
+  },
 //   {
 //     id: 9,
 //     title: "Trackify",
@@ -681,3 +722,27 @@ export const projects = [
 //     webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
 //   },
 ];
+
+export const info = [
+  {
+    number: "3+",
+    title: "Projects Completed",
+    description: "Successfully delivered diverse projects ranging from web apps"
+  },
+  {
+    number: "6+",
+    title: "Months Experience",
+    description: "Continuous learning and hands-on development experience across multiple technologies"
+  },
+  {
+    number: "1",
+    title: "Technologies Mastered",
+    description: "Proficient in modern web, mobile, and software development technologies"
+  },
+  {
+    number: "100%",
+    title: "Client Satisfaction",
+    description: "Committed to delivering high-quality solutions that exceed expectations"
+  },
+];
+

@@ -3,40 +3,45 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
+import StarCanvas from "../canvas/Stars"; // 🌌 Importing the stars
 
-// Styled Components
+// 🌠 Styled Components
 const Container = styled(motion.div)`
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  overflow: hidden; /* Important for the star canvas layer */
   z-index: 1;
-  @media (max-width: 960px) {
-    padding: 0px;
-  }
+`;
+
+const StarBackground = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* Behind all content */
 `;
 
 const Wrapper = styled(motion.div)`
   position: relative;
+  z-index: 2; /* Content above stars */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1350px;
-  padding: 0px 0px 80px 0px;
+  padding: 40px 20px 100px;
   gap: 20px;
-  @media (max-width: 960px) {
-    padding: 40px 0px;
-  }
 `;
 
 const Title = styled(motion.h2)`
   font-size: 52px;
   text-align: center;
   font-weight: 700;
-  margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
+  margin-top: 20px;
   @media (max-width: 768px) {
     font-size: 32px;
     margin-top: 10px;
@@ -122,7 +127,7 @@ const Button = styled(motion.input)`
   }
 `;
 
-// Motion Variants
+// 🌙 Motion Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -132,21 +137,11 @@ const fadeInUp = {
   },
 };
 
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1 } },
-};
-
 const floatAnimation = {
   y: [0, -20, 0],
-  transition: {
-    duration: 4,
-    ease: "easeInOut",
-    repeat: Infinity,
-  },
+  transition: { duration: 4, ease: "easeInOut", repeat: Infinity },
 };
 
-// Component
 const Contact = () => {
   const form = useRef();
 
@@ -167,13 +162,19 @@ const Contact = () => {
         },
         (error) => {
           console.error(error);
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Something went wrong. Please try again.");
         }
       );
   };
 
   return (
-    <Container variants={fadeIn} initial="hidden" animate="visible">
+    <Container initial="hidden" animate="visible">
+      {/* 🌌 Background Stars Layer */}
+      <StarBackground>
+        <StarCanvas />
+      </StarBackground>
+
+      {/* 🌍 Foreground Content */}
       <Wrapper>
         <motion.div
           animate={floatAnimation}
@@ -182,11 +183,9 @@ const Contact = () => {
           <EarthCanvas />
         </motion.div>
 
-        <Title variants={fadeInUp} initial="hidden" animate="visible">
-          Contact
-        </Title>
+        <Title variants={fadeInUp}>Contact</Title>
 
-        <Desc variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.1 }}>
+        <Desc variants={fadeInUp}>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
 
@@ -194,8 +193,6 @@ const Contact = () => {
           ref={form}
           onSubmit={handleSubmit}
           variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
           transition={{ delay: 0.3 }}
         >
           <ContactTitle>Email Me 🚀</ContactTitle>

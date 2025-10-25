@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Info from "./components/sections/Info";
+import Inf from "./components/sections/Inf";
 import Skills from "./components/sections/Skills";
 import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
@@ -49,14 +50,15 @@ function App() {
           <AnimatePresence>
             <div>
               <Hero />
-              <Info />
+              <Inf openModal={openModal} setOpenModal={setOpenModal} />
               <Wrapper>
-                <Skills />
                 <Education />
-              </Wrapper>
-              <Projects openModal={openModal} setOpenModal={setOpenModal} />
-              <Wrapper>
+                <Skills />
                 <Experience />
+              </Wrapper>
+              <Wrapper>
+                <Info />
+                <Projects openModal={openModal} setOpenModal={setOpenModal} />
                 <Contact />
               </Wrapper>
               <Footer />
