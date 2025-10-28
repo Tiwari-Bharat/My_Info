@@ -1,14 +1,34 @@
+import {
+  User,
+  Award,
+  BookOpen,
+  Heart,
+  Phone,
+  Droplets,
+  MapPin,
+  Star,
+  BadgeAlert,
+  Calendar,
+  IdCard,
+  Home,
+  Target,
+  Laptop,
+  Brain,
+  PenTool,
+  KeyRound,
+} from "lucide-react";
+
 export const Bio = {
   name: "Bharatdev Tiwari",
   roles: [
     "Student",
     "",
     "Student of Nowadaya",
-    "Android Developer",
     "Programmer",
     "Full Stack Developer",
     "Web Developer",
     "Software Developer",
+    "Android Developer",
     "Story Developer",
   ],
   description:
@@ -21,7 +41,7 @@ export const Bio = {
   facebook: "#",
 };
 
-import { User, Phone, MapPin, Heart, BookOpen, Award, Droplets, Mail, BadgeAlert } from "lucide-react";
+
 export const personalInfo = [
   {
     id: 1,
@@ -38,8 +58,9 @@ export const personalInfo = [
     section: "Father’s Details",
     icon: User,
     details: [
-      { title: "Father’s Name", value: "Shree Devendra Prasad Tiwari" },
-      { title: "Aadhaar Number", value: "XXXX-XXXX-XXXX" },
+      { title: "Father’s Name", value: "Shree Devendra Prasad Tiwari", icon: User },
+      { title: "Aadhaar Name", value: "Devendra Prasad Tiwari", icon: IdCard },
+      { title: "Aadhaar Number", value: "8377-8901-9260", icon: IdCard },
       { title: "Phone Number", value: "+91 9327163480", icon: Phone },
     ],
   },
@@ -48,8 +69,9 @@ export const personalInfo = [
     section: "Mother’s Details",
     icon: Heart,
     details: [
-      { title: "Mother’s Name", value: "Smt. Anita Devendraprasad Tiwari" },
-      { title: "Aadhaar Number", value: "XXXX-XXXX-XXXX" },
+      { title: "Mother’s Name", value: "Smt. Anita Devendraprasad Tiwari", icon: Heart },
+      { title: "Aadhaar Name", value: "Anita Tiwari / Anitadevi", icon: IdCard },
+      { title: "Aadhaar Number", value: "4585-3294-6875", icon: IdCard },
       { title: "Phone Number", value: "+91 7069524188", icon: Phone },
     ],
   },
@@ -58,11 +80,10 @@ export const personalInfo = [
     section: "Personal Information",
     icon: Droplets,
     details: [
-      { title: "Date of Birth", value: "19 October 2009" },
-      { title: "Blood Group", value: "O+" },
+      { title: "Date of Birth / Blood Group", value: "19 Oct 2009 / O+", icon: Calendar },
       { title: "Contact Number", value: "+91 7069524188", icon: Phone },
-      { title: "Address", value: "Chanod, Vapi, Valsad, Gujarat.", icon: MapPin },
-      { title: "Aadhaar Card", value: "455513194333" },
+      { title: "Address", value: "Chanod, Vapi, Valsad, Gujarat.", icon: Home },
+      { title: "Aadhaar Card", value: "4555-1319-4333", icon: IdCard },
     ],
   },
   {
@@ -70,10 +91,10 @@ export const personalInfo = [
     section: "Interests & Ambitions",
     icon: Award,
     details: [
-      { title: "Favourite Subject", value: "Computer Science" },
-      { title: "Special Skill", value: "Creative Coding & Web Designing" },
-      { title: "Hobbies", value: "Writing, Designing, Exploring AI Tools" },
-      { title: "Ambition", value: "To become a Full Stack Developer r" },
+      { title: "Favourite Subject", value: "Computer Science", icon: BookOpen },
+      { title: "Special Skill", value: "Creative Coding & Web Designing", icon: PenTool },
+      { title: "Hobbies", value: "Writing, Designing, Exploring AI Tools", icon: Brain },
+      { title: "Ambition", value: "To become a Full Stack Developer", icon: Target },
     ],
   },
   {
@@ -81,10 +102,30 @@ export const personalInfo = [
     section: "Important & Exams",
     icon: BadgeAlert,
     details: [
-      { title: "Board Roll No.", value: "11142639" },
-      { title: "APAAR ID", value: "—" },
-      { title: "Khan Academy ID", value: "bharattiwari2" },
-      { title: "Password", value: "Jnvvalsad" },
+      { title: "Board Roll No.", value: "11142639", icon: IdCard },
+      { title: "APAAR ID", value: "351085230477", icon: IdCard },
+      { title: "Khan Academy ID", value: "bharattiwari2", icon: Laptop },
+      { title: "Password", value: "Jnvvalsad", icon: KeyRound },
+    ],
+  },
+  {  id: 7,
+    section: "Useful Websites",
+    icon: BadgeAlert,
+    details: [
+      { title: "GitHub", value: "https://github.com" },
+      { title: "Simplenote", value: "https://app.simplenote.com/" },
+      { title: "Mediafire", value: "https://www.mediafire.com/" },
+      { title: "SSYoutube", value: "https://https://ssyoutube.online/en2/" },
+    ],
+  },
+  {  id: 8,
+    section: "Password Websites",
+    icon: BadgeAlert,
+    details: [
+      { title: "Mediafire", value: "tiwaribharat5321@gmail.com", icon: IdCard },
+      { title: "Password", value: "9WPgd3E5EUc/L?z", icon: KeyRound },
+      { title: "Simplenote", value: "tiwaribharat5321@gmail.com", icon: IdCard },
+      { title: "Password", value: "[bharat]Simpleno/", icon: KeyRound },
     ],
   },
 ];
@@ -390,9 +431,9 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
       {
-        name: "Postman",
+        name: "Acode",
         image:
-          "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEv66w5NbM0JNB5Ip0OGJ15cChe3GqLzp6wA&s",
       },
       // {
       //   name: "Adobe XD",
@@ -531,78 +572,78 @@ export const projects = [
     github: "#",
     webapp: "https://bharatdev.netlify.app/",
   },
-//   {
-//     id: 9,
-//     title: "Trackify",
-//     date: "Jun 2023 - Jul 2023",
-//     description:
-//       "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-//     tags: [
-//       "Docker",
-//       "AWS",
-//       "DuckDNS",
-//       "Eslint",
-//       "Husky",
-//       "CI/CD",
-//       "React Js",
-//       "MongoDb",
-//       "Node Js",
-//       "Express Js",
-//       "Redux",
-//     ],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/Trackify",
-//     webapp: "https://trackify-management.netlify.app/",
-//   },
-//   {
-//     id: 0,
-//     title: "Podstream",
-//     date: "Apr 2023 - May 2023",
-//     description:
-//       "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-//     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/Podstream",
-//     webapp: "https://podstream.netlify.app/",
-//     member: [
-//       {
-//         name: "Rishav Chanda",
-//         img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-//         linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-//         github: "https://github.com/rishavchanda/",
-//       },
-//       {
-//         name: "Upasana Chaudhuri",
-//         img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-//         linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-//         github: "https://github.com/upasana0710",
-//       },
-//     ],
-//   },
-//   {
-//     id: 1,
-//     title: "Vexa",
-//     date: "Oct 2022 - Jan 2023",
-//     description:
-//       "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-//     tags: [
-//       "React Js",
-//       "MongoDb",
-//       "Node Js",
-//       "Express Js",
-//       "Redux",
-//       "NodeMailer",
-//     ],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/Project-Management-App",
-//     webapp: "https://vexa-app.netlify.app/",
-//   },
+  // {
+  //   id: 2,
+  //   title: "Notable Cloud Storage",
+  //   date: "Oct 2025 - Continue",
+  //   description:
+  //     "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
+  //   image:
+  //     "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+  //   tags: [
+  //     "Docker",
+  //     "AWS",
+  //     "DuckDNS",
+  //     "Eslint",
+  //     "Husky",
+  //     "CI/CD",
+  //     "React Js",
+  //     "MongoDb",
+  //     "Node Js",
+  //     "Express Js",
+  //     "Redux",
+  //   ],
+  //   category: "web app",
+  //   github: "https://github.com/rishavchanda/Trackify",
+  //   webapp: "https://trackify-management.netlify.app/",
+  // },
+  // {
+  //   id: 0,
+  //   title: "Podstream",
+  //   date: "Apr 2023 - May 2023",
+  //   description:
+  //     "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+  //   image:
+  //     "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+  //   tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+  //   category: "web app",
+  //   github: "https://github.com/rishavchanda/Podstream",
+  //   webapp: "https://podstream.netlify.app/",
+  //   member: [
+  //     {
+  //       name: "Rishav Chanda",
+  //       img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+  //       linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+  //       github: "https://github.com/rishavchanda/",
+  //     },
+  //     {
+  //       name: "Upasana Chaudhuri",
+  //       img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+  //       linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+  //       github: "https://github.com/upasana0710",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 1,
+  //   title: "Vexa",
+  //   date: "Oct 2022 - Jan 2023",
+  //   description:
+  //     "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
+  //   image:
+  //     "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+  //   tags: [
+  //     "React Js",
+  //     "MongoDb",
+  //     "Node Js",
+  //     "Express Js",
+  //     "Redux",
+  //     "NodeMailer",
+  //   ],
+  //   category: "web app",
+  //   github: "https://github.com/rishavchanda/Project-Management-App",
+  //   webapp: "https://vexa-app.netlify.app/",
+  // },
 //   {
 //     id: 2,
 //     title: "Brain Tumor Detection",

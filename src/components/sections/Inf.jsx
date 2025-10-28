@@ -1,175 +1,197 @@
-import React from "react";
+import React, { memo, Suspense } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { personalInfo } from "../../data/constants";
-import { User, BookOpen, Heart, Phone, Droplets, MapPin, Star } from "lucide-react";
-import ProfileImg from "../../images/HeroImage.jpg"; // Import your image
-import StarCanvas from "../canvas/Stars";
+import {
+  User,
+  BookOpen,
+  Heart,
+  Phone,
+  Droplets,
+  MapPin,
+  Star,
+  Mail,
+  Calendar,
+  Globe,
+  Code,
+  GraduationCap,
+  Briefcase,
+} from "lucide-react";
+import ProfileImg from "../../images/HeroImage.jpg";
+const StarCanvas = React.lazy(() => import("../canvas/Stars"));
 
+/* 🌌 Base Layout */
 const Container = styled.section`
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 16px;
+  background: radial-gradient(circle at center, #0a0f1e, #020409 85%);
+  padding: 100px 40px;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 `;
 
 const Aurora = styled(motion.div)`
   position: absolute;
-  width: 140%;
-  height: 140%;
-  top: -20%;
-  left: -20%;
-  background: radial-gradient(ellipse at top left, #58a6ff33, transparent 70%),
-              radial-gradient(ellipse at bottom right, #22d3ee33, transparent 70%);
-  filter: blur(120px);
-  z-index: 0;
-  animation: flow 12s infinite alternate ease-in-out;
-
-  @keyframes flow {
+  width: 160%;
+  height: 160%;
+  top: -30%;
+  left: -30%;
+  background: radial-gradient(ellipse at top left, #4f9cff33, transparent 70%),
+              radial-gradient(ellipse at bottom right, #00e5ff33, transparent 70%);
+  filter: blur(160px);
+  animation: auroraFlow 15s infinite alternate ease-in-out;
+  @keyframes auroraFlow {
     0% { transform: translate(-10%, -10%) scale(1); }
-    100% { transform: translate(10%, 10%) scale(1.1); }
+    100% { transform: translate(10%, 10%) scale(1.05); }
   }
 `;
 
 const Panel = styled(motion.div)`
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(22px);
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(28px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
+/* ===== Header ===== */
 const Header = styled(motion.div)`
-  background: linear-gradient(90deg, #2563eb22, #22d3ee22);
-  padding: 30px 40px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: -2;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 70px;
+  background: linear-gradient(90deg, rgba(37,99,235,0.1), rgba(34,211,238,0.1));
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 
-  @media (max-width: 600px) {
-    justify-content: center;
-    padding: 25px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
   }
 `;
 
 const Profile = styled.div`
-  width: 120px;
-  height: 120px;
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background-image: url(${ProfileImg});
   background-size: cover;
   background-position: center;
-  border: 3px solid rgba(88, 166, 255, 0.7);
-  box-shadow: 0 0 25px rgba(88, 166, 255, 0.4);
+  border: 4px solid rgba(88, 166, 255, 0.8);
+  box-shadow: 0 0 45px rgba(88, 166, 255, 0.4);
 
   @media (max-width: 600px) {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 `;
 
 const HeaderText = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   color: #e2e8f0;
-  flex: 1;
 `;
 
 const Title = styled.h1`
-  font-size: 32px;
-  color: #fff;
-  font-weight: 700;
+  font-size: 44px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 
-  @media (max-width: 600px) {
-    font-size: 24px;
-    text-align: center;
+  @media (max-width: 900px) {
+    font-size: 28px;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 16px;
-  color: #94a3b8;
-  margin-top: 4px;
-
-  @media (max-width: 600px) {
-    text-align: center;
-    font-size: 14px;
-  }
+  font-size: 18px;
+  color: #a0aec0;
+  font-style: italic;
 `;
 
+/* ===== Body ===== */
 const Body = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.02);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px;
+  padding: 60px 70px;
+  background: rgba(255, 255, 255, 0.015);
 
-  @media (max-width: 768px) {
-    padding: 30px 20px;
+  @media (max-width: 900px) {
+    padding: 40px 25px;
   }
 
-  @media (max-width: 480px) {
-    padding: 20px 10px;
-    gap: 18px;
+  @media (max-width: 600px) {
+    padding: 25px 16px;
+    gap: 20px;
   }
 `;
 
 const Card = styled(motion.div)`
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), transparent);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  padding: 20px 22px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
+  padding: 25px;
+  box-shadow: 0 0 25px rgba(88, 166, 255, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 35px rgba(88, 166, 255, 0.25);
-  }
-
-  @media (max-width: 480px) {
-    padding: 15px 16px;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 40px rgba(88, 166, 255, 0.25);
   }
 `;
 
 const CardTitle = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   color: #58a6ff;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 10px;
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
 `;
 
 const Item = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: #cbd5e1;
   padding: 6px 0;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  font-size: 16px;
+  gap: 10px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     gap: 4px;
   }
+`;
+
+const LabelGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+const LabelIcon = styled.span`
+  color: #58a6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Label = styled.span`
@@ -179,19 +201,35 @@ const Label = styled.span`
 const Value = styled.span`
   color: #94a3b8;
   font-style: italic;
-  text-align: right;
-
-  @media (max-width: 480px) {
-    text-align: left;
-  }
 `;
 
-const Inf = () => {
+/* ===== Icon Mapper ===== */
+const iconMapper = {
+  name: User,
+  email: Mail,
+  phone: Phone,
+  birthday: Calendar,
+  location: MapPin,
+  hobby: Heart,
+  education: GraduationCap,
+  skills: Code,
+  experience: Briefcase,
+  website: Globe,
+  blood: Droplets,
+  favorite: Star,
+};
+
+/* ===== Component ===== */
+const Inf = memo(() => {
   return (
     <Container id="Inf">
       <Aurora />
+      <Suspense fallback={<div style={{ color: "#94a3b8" }}>Loading stars...</div>}>
+        <StarCanvas />
+      </Suspense>
+
       <Panel
-        initial={{ opacity: 0, y: 60 }}
+        initial={{ opacity: 0, y: 70 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
@@ -210,14 +248,23 @@ const Inf = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
               <CardTitle>
-                {section.icon && <section.icon size={18} />}
+                {section.icon && <section.icon size={20} />}
                 {section.section}
               </CardTitle>
+
               {section.details.map((detail, i) => (
                 <Item key={i}>
-                  <Label>{detail.title}</Label>
+                  <LabelGroup>
+                    {detail.icon && (
+                      <LabelIcon>
+                        <detail.icon size={16} />
+                      </LabelIcon>
+                    )}
+                    <Label>{detail.title}</Label>
+                  </LabelGroup>
                   <Value>{detail.value}</Value>
                 </Item>
               ))}
@@ -227,6 +274,6 @@ const Inf = () => {
       </Panel>
     </Container>
   );
-};
+});
 
 export default Inf;
