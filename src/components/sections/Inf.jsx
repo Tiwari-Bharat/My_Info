@@ -27,11 +27,11 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at center, #0a0f1e, #020409 85%);
   padding: 100px 40px;
   position: relative;
   overflow: hidden;
 `;
+  // background: radial-gradient(circle at center, #0a0f1e, #020409 85%);
 
 const Aurora = styled(motion.div)`
   position: absolute;
