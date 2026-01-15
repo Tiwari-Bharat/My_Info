@@ -267,7 +267,7 @@ export const education = [{
     school: "Jawahar Navodaya Vidyalaya, Valsad",
     date: "Apr 2021 - Apr 2024",
     grade: "Not Available",
-    desc: I completed my middle school education (Classes VI to IX) at Jawahar Navodaya Vidyalaya, Valsad. During this period, I developed academic discipline, subject awareness, and the learning maturity required for secondary education.",
+    desc: "I completed my middle school education (Classes VI to IX) at Jawahar Navodaya Vidyalaya, Valsad. During this period, I developed academic discipline, subject awareness, and the learning maturity required for secondary education.",
     degree: "VI, VII, VIII & IX Pass",
   },
   {
@@ -285,7 +285,7 @@ export const education = [{
     school: "Jai Bajarang English medium School",
     date: "2017 - 2018",
     grade: "Not Available",
-    desc: I completed my primary education (Class I) at Jai Bajarang English Medium School. This phase marked my formal entry into structured education and foundational classroom learning.",
+    desc: "I completed my primary education (Class I) at Jai Bajarang English Medium School. This phase marked my formal entry into structured education and foundational classroom learning.",
     degree: "I Class Pass",
   },
   {
@@ -739,7 +739,7 @@ export const projects = [{
       "Firebase",
     ],
     category: "web app",
-    github: "#",
+    github: "https://www.mediafire.com/file/dbwp0u2y7b09o0d/Windows.zip/file",
     webapp: "https://advance-tts.netlify.app/",
   },
   // {
