@@ -130,10 +130,10 @@ const Projects = ({ openModal, setOpenModal }) => {
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "machine learning"}
+            active={toggle === "web games"}
             onClick={() => setToggle("machine learning")}
           >
-            MACHINE LEARNING
+            WEB GAMES
           </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
